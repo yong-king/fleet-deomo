@@ -9,12 +9,12 @@ spec:
   ports:
   {{- if eq .Values.service.type "NodePort" }}
     - port: 8080
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
       nodePort: {{ .Values.service.ports.nodePort }}
   {{- else }}
     - port: 8080 
-      targetPort: 8080
+      targetPort: 80
       protocol: TCP
       name: http
   {{- end }}

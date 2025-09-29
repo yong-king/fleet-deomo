@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: nginx
+  repository: docker.io/library/nginx
   pullPolicy: IfNotPresent
   tag: "1.21.6"
 imagePullSecrets: []

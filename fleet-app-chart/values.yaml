@@ -1,0 +1,35 @@
+replicaCount: 1
+image:
+  repository: bluezd/cicd-hello-world
+  pullPolicy: Always
+  tag: c7eec4ae5e22ec2771da9918995760067634d56b
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: fleet-app
+serviceAccount:
+  create: false
+  annotations: {}
+  name: ""
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+service:
+  type: NodePort
+  ports:
+    nodePort: 32080
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+  - host: chart-example.local
+    paths: []
+  tls: []
+resources: {}
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+nodeSelector: {}
+tolerations: []
+affinity: {}

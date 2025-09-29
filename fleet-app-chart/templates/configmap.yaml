@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fleet-app-html
+data:
+  index.html: |
+    <html>
+    <body>
+      <h1>welcome fleet demo v1!</h1>
+    </body>
+    </html>

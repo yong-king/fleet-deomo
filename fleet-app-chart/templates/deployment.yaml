@@ -47,6 +47,17 @@ spec:
               port: 80
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: html-volume
+              mountPath: /usr/share/nginx/html/index.html
+              subPath: index.html
+      volumes:
+        - name: html-volume
+          configMap:
+            name: {{ include "fleet-app-chart.fullname" . }}-html
+            items:
+              - key: index.html
+                path: index.html
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

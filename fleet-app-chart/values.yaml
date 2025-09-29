@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: docker.io/library/nginx
   pullPolicy: IfNotPresent
-  tag: "1.23"
+  tag: "1.25"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: fleet-app

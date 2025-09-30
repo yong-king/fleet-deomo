@@ -16,7 +16,7 @@ securityContext: {}
 service:
   type: NodePort
   ports:
-    nodePort: 32081
+    nodePort: 32099
 ingress:
   enabled: false
   annotations: {}

@@ -54,7 +54,7 @@ spec:
       volumes:
         - name: html-volume
           configMap:
-            name: {{ include "fleet-app-chart.fullname" . }}-html
+            name: {{ include "fleet-app-chart.fullname" . }}-html-clustergroup
             items:
               - key: index.html
                 path: index.html

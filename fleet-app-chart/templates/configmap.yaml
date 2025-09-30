@@ -4,4 +4,4 @@ metadata:
   name: {{ include "fleet-app-chart.fullname" . }}-html
 data:
   index.html: |
-{{ .Files.Get "files/index.html" | indent 4 }}
+{{ .Files.Get "files/index2.html" | indent 4 }}

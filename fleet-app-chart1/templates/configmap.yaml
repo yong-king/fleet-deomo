@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ include "fleet-app-chart.fullname" . }}-html-Clustergroup
+  name: {{ include "fleet-app-chart.fullname" . }}-html-clustergroup
 data:
   index.html: |
 {{ .Files.Get "files/index2.html" | indent 4 }}

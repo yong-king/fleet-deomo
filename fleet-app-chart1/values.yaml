@@ -1,0 +1,35 @@
+replicaCount: 1
+image:
+  repository: docker.io/library/nginx
+  pullPolicy: IfNotPresent
+  tag: "1.25"
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: fleet-app
+serviceAccount:
+  create: false
+  annotations: {}
+  name: ""
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+service:
+  type: NodePort
+  ports:
+    nodePort: 32080
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+  - host: chart-example.local
+    paths: []
+  tls: []
+resources: {}
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+nodeSelector: {}
+tolerations: []
+affinity: {}

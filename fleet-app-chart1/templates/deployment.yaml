@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "fleet-app-chart.fullname" . }}
+  name: {{ include "fleet-app-chart.fullname" . }}-clustergroup
   labels:
     {{- include "fleet-app-chart.labels" . | nindent 4 }}
 spec:
